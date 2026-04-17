@@ -1,0 +1,100 @@
+{
+  "title": "Demo Reel",
+  "subtitleChunks": [
+    {
+      "text": "So the core thing with Supabase",
+      "startTime": 0.119,
+      "endTime": 1.659
+    },
+    {
+      "text": "is you get a full PostgreSQL",
+      "startTime": 1.699,
+      "endTime": 3.059
+    },
+    {
+      "text": "database for every project, not some",
+      "startTime": 3.119,
+      "endTime": 5.619
+    },
+    {
+      "text": "weird proprietary thing, actual PostgreSQL. But",
+      "startTime": 5.699,
+      "endTime": 9.619
+    },
+    {
+      "text": "they bolt on real time functionality,",
+      "startTime": 9.659,
+      "endTime": 11.659
+    },
+    {
+      "text": "backups, extensions, the whole deal. So",
+      "startTime": 11.92,
+      "endTime": 14.42
+    },
+    {
+      "text": "you're not just getting a database,",
+      "startTime": 14.46,
+      "endTime": 15.699
+    },
+    {
+      "text": "you're getting a database that can",
+      "startTime": 15.779,
+      "endTime": 17.02
+    },
+    {
+      "text": "push changes to your front end",
+      "startTime": 17.079,
+      "endTime": 18.899
+    },
+    {
+      "text": "the second data changes. That's the",
+      "startTime": 18.959,
+      "endTime": 20.839
+    },
+    {
+      "text": "main sell. You keep all the",
+      "startTime": 20.979,
+      "endTime": 22.419
+    },
+    {
+      "text": "PostgreSQL knowledge you already have, all",
+      "startTime": 22.479,
+      "endTime": 24.379
+    },
+    {
+      "text": "the SQL you already know, and",
+      "startTime": 24.42,
+      "endTime": 25.959
+    },
+    {
+      "text": "you just get a bunch of",
+      "startTime": 26,
+      "endTime": 26.799
+    },
+    {
+      "text": "extra stuff on top. If you've",
+      "startTime": 26.92,
+      "endTime": 29.5
+    },
+    {
+      "text": "ever set up PostgreSQL, a REST",
+      "startTime": 29.539,
+      "endTime": 30.979
+    },
+    {
+      "text": "API, a auth, and file storage",
+      "startTime": 31.059,
+      "endTime": 32.939
+    },
+    {
+      "text": "separately, this is all of that",
+      "startTime": 33,
+      "endTime": 34.419
+    },
+    {
+      "text": "in one dashboard. That's basically it.",
+      "startTime": 34.479,
+      "endTime": 36.799
+    }
+  ]
+}
