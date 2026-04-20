@@ -194,6 +194,20 @@ const app = new Elysia()
     })
   })
 
+  // Serve built frontend in production (SPA with fallback to index.html)
+  .get('/assets/*', ({ params }: { params: { '*': string } }) => {
+    const file = Bun.file(join(import.meta.dir, '../../web/dist/assets', params['*']))
+    return new Response(file)
+  })
+  .get('/*', ({ request }) => {
+    const { pathname } = new URL(request.url)
+    // Let API/video routes fall through as 404
+    if (pathname.startsWith('/api') || pathname.startsWith('/videos')) {
+      return new Response('Not found', { status: 404 })
+    }
+    return new Response(Bun.file(join(import.meta.dir, '../../web/dist/index.html')))
+  })
+
   .listen(3001)
 
 console.log('API running on http://localhost:3001')

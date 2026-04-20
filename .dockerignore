@@ -1,0 +1,7 @@
+node_modules
+api/node_modules
+web/node_modules
+vids/
+web/dist/
+.env
+api/.env

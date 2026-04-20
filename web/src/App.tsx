@@ -6,7 +6,7 @@ import { BottomSheet } from './components/BottomSheet'
 import { useWindowSize } from './hooks/useWindowSize'
 import type { Reel } from './types'
 
-const API = 'http://localhost:3001'
+const API = import.meta.env.PROD ? '' : 'http://localhost:3001'
 
 export default function App() {
   const [reels, setReels] = useState<Reel[]>([])
@@ -17,7 +17,7 @@ export default function App() {
   const { isMobile } = useWindowSize()
 
   useEffect(() => {
-    if (import.meta.env.VITE_DEMO !== '1') return
+    if (window.location.pathname !== '/demo') return
     fetch(`${API}/api/demo`)
       .then((r) => r.json())
       .then((reel) => setReels([{

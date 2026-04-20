@@ -4,7 +4,9 @@
   "workspaces": ["api", "web"],
   "scripts": {
     "dev": "concurrently \"bun run --cwd api src/index.ts\" \"bun run --cwd web dev\"",
-    "demo": "concurrently \"bun run --cwd api src/index.ts\" \"bun run --cwd web vite --mode demo\"",
+    "demo": "bun run dev",
+    "build": "bun run --cwd web build",
+    "start": "bun run api/src/index.ts",
     "split": "bun run scripts/split-videos.ts",
     "install:all": "bun install --cwd api && bun install --cwd web"
   },
