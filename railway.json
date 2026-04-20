@@ -1,9 +1,11 @@
 {
   "$schema": "https://schema.railway.app/railway.schema.json",
   "build": {
-    "builder": "DOCKERFILE"
+    "builder": "DOCKERFILE",
+    "dockerfilePath": "Dockerfile"
   },
   "deploy": {
-    "region": "us-west1"
+    "region": "europe-west4",
+    "startCommand": "bun run api/src/index.ts"
   }
 }
