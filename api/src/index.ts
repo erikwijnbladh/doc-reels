@@ -208,6 +208,6 @@ const app = new Elysia()
     return new Response(Bun.file(join(import.meta.dir, '../../web/dist/index.html')))
   })
 
-  .listen(Number(process.env.PORT) || 3001)
+  .listen({ port: Number(process.env.PORT) || 3001, hostname: '0.0.0.0' })
 
 console.log(`API running on port ${process.env.PORT || 3001}`)
