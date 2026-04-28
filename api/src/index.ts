@@ -204,7 +204,7 @@ const app = new Elysia()
   // Serve built frontend in production (SPA with fallback to index.html)
   .get('/assets/*', ({ params }: { params: { '*': string } }) => {
     const file = Bun.file(join(import.meta.dir, '../../web/dist/assets', params['*']))
-    return new Response(file)
+    return new Response(file, { headers: { 'Content-Type': file.type || 'application/octet-stream' } })
   })
   .get('/*', ({ request }) => {
     const { pathname } = new URL(request.url)
