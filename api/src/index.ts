@@ -140,8 +140,15 @@ const app = new Elysia()
     })
   })
 
-  // Generate reels — streams SSE progress events then final data
-  .post('/api/generate', ({ body }) => {
+  // Generate reels — disabled in production to protect API keys
+  .post('/api/generate', ({ body, set }) => {
+    if (process.env.NODE_ENV === 'production') {
+      set.status = 403
+      return new Response(JSON.stringify({ error: 'Generation disabled on demo deployment' }), {
+        headers: { 'Content-Type': 'application/json' },
+      })
+    }
+
     const { url } = body as { url: string }
 
     const stream = new ReadableStream({
